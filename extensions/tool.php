@@ -135,17 +135,17 @@ if(!empty($current_extension)) {
 	
 	if(isset($_POST['check'])) {
 		echo "Checking ...\n";
-		echo "Files marked with yellow exist in OpenCart installation and will be overwritten when install.\n\n";
+		echo "Files marked in yellow exists in your OpenCart installation and will be overwritten when install.\n\n";
 		$tool->check($current_extension);
 	
 	} elseif(isset($_POST['install'])) {
 		echo "Installing ...\n";
-		echo "Files marked with yellow got an error.\n\n";
+		echo "Files marked in yellow got an error.\n\n";
 		$tool->install($current_extension);
 
 	} elseif(isset($_POST['remove'])) {
 		echo "Removing ...\n";
-		echo "Files marked with yellow wasn't found to be removed in OpenCart installation.\n\n";
+		echo "Files marked in yellow wasn't found to be removed in your OpenCart installation.\n\n";
 		$tool->remove($current_extension);
 	}
 			
