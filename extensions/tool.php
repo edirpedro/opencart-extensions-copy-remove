@@ -116,12 +116,12 @@ $current_extension = isset($_POST['extension']) ? $_POST['extension'] : null;
 <label>Extension: 
 	<select name="extension">
 		<option></option>
-		<? 
+		<?php
 		foreach($extensions as $dir) : 
 			$extension = str_replace(dirname(__FILE__), '', $dir);
 		?>
-		<option value="<?= $extension ?>" <?= $current_extension == $extension ? 'selected="selected"' : null ?>><?= $extension ?></option>
-		<? endforeach; ?>
+		<option value="<?php echo $extension ?>" <?php echo $current_extension == $extension ? 'selected="selected"' : null ?>><?php echo $extension ?></option>
+		<?php endforeach; ?>
 	</select></label>
 	<input type="submit" name="check" value="Check">
 	<input type="submit" name="install" value="Install" onclick="javascript:return confirm('Are you sure to Install?');">
@@ -129,7 +129,7 @@ $current_extension = isset($_POST['extension']) ? $_POST['extension'] : null;
 </form>
 
 <pre><code>
-<?
+<?php
 if(!empty($current_extension)) {
 	$tool = new Tool();
 	
